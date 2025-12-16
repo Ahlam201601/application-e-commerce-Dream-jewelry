@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  FaShoppingBag,
-  FaHeart,
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
+import {FaShoppingBag,FaHeart,FaBars,FaTimes,} from "react-icons/fa";
 import { useState } from "react";
 import logo from "../assets/image/logo.png";
 
@@ -15,7 +10,6 @@ export default function Navbar() {
     <>
       <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#050517] to-[#0a0a1f] text-white">
 
-        {/* ===== Top Icons ===== */}
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-6 text-white/80">
             <FaShoppingBag className="cursor-pointer hover:text-[#d4af37] transition" />
@@ -23,7 +17,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-col items-center">
-            <span className="font-serif text-[24px] md:text-[26px] tracking-[0.35em] uppercase">
+            <span className="font-serif text-[22px] md:text-[24px] tracking-[0.35em] uppercase">
               Dream Jewelry
             </span>
           </div>
@@ -45,22 +39,22 @@ export default function Navbar() {
             <img
               src={logo}
               alt="Dream Jewelry"
-              className="h-[40px] md:h-[65px] mx-auto"
+              className="h-9 md:h-12 mx-auto"
             />
           </div>
         </div>
 
         {/* ===== Desktop Navigation ===== */}
         <div className="hidden md:block max-w-7xl mx-auto px-6">
-          <ul className="flex justify-center gap-12 py-6 text-[12px] tracking-[0.3em] uppercase font-light ">
+          <ul className="flex justify-center gap-12 py-4 text-[11px] tracking-[0.3em] uppercase font-light ">
             <li className="relative group cursor-pointer">
-              <Link to="/" className="transition hover:text-[#d4af37]">
+              <Link to="/" className="transition hover:text-[#d4af37] text-white">
                 Home
               </Link>
               <span className="absolute left-1/2 -bottom-2 h-[1.5px] w-0 bg-[#d4af37] transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </li>
             <li className="relative group cursor-pointer">
-              <Link to="/catalogue" className="transition hover:text-[#d4af37]">
+              <Link to="/catalogue" className="transition hover:text-[#d4af37] text-white">
                 Catalogue
               </Link>
               <span className="absolute left-1/2 -bottom-2 h-[1.5px] w-0 bg-[#d4af37] transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
@@ -71,8 +65,8 @@ export default function Navbar() {
 
       {/* ===== Mobile Menu ===== */}
       {open && (
-        <div className="fixed top-[140px] left-0 w-full bg-[#050517] z-40 md:hidden border-t border-white/10">
-          <ul className="flex flex-col items-center gap-6 py-10 text-xs tracking-[0.35em] uppercase font-light text-white">
+        <div className="fixed top-32 left-0 w-full bg-[#050517] z-40 md:hidden border-t border-white/10">
+          <ul className="flex flex-col items-center gap-4 py-6 text-xs tracking-[0.35em] uppercase font-light text-white">
             <li>
               <Link
                 to="/"
