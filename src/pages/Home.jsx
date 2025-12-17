@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
-import box1 from "../assets/images/box1.png"
-import box2 from "../assets/images/box2.png"
-import box3 from "../assets/images/box3.png"
+import box1 from "../assets/images/box1.png";
+import box2 from "../assets/images/box2.png";
+import box3 from "../assets/images/box3.png";
+import section from "../assets/images/section.jpeg";
 
 export default function Home() {
   return (
@@ -89,6 +90,39 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <section className="w-full min-h-screen bg-[#faf9f7] flex items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-6">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <h1 className="text-4xl lg:text-5xl font-serif text-[#0a0a1f] leading-tight">
+              Preserve The Moment
+            </h1>
+
+            <p className="text-gray-700 max-w-md leading-relaxed">
+              Jewelry has a remarkable ability to preserve moments and memories,
+              serving as tangible. <br />A gift from a loved one, or an
+              accessory worn during a special occasion.
+            </p>
+
+            <a
+              href="#"
+              className="border border-yellow-600 px-10 py-4 text-sm tracking-widest hover:bg-yellow-600 hover:text-white transition-all duration-300"
+            >
+              SHOP NOW
+            </a>
+          </div>
+
+          {/* Right Image */}
+          <div className="w-full h-full">
+            <img
+              src={section}
+              alt="Jewelry Hero"
+              className="w-full h-full object-cover rounded-sm"
+            />
+          </div>
+        </div>
+      </section>
 
       <div className="container mx-auto px-4 py-8 relative z-20">
         {/* Title */}
