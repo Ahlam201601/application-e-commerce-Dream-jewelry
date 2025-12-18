@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#050517] to-[#0a0a1f] text-white">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-linear-to-b from-[#050517] to-[#0a0a1f] text-white">
 
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-6 text-white/80">

@@ -5,6 +5,8 @@ import box1 from "../assets/images/box1.png";
 import box2 from "../assets/images/box2.png";
 import box3 from "../assets/images/box3.png";
 import section from "../assets/images/section.jpeg";
+import home1 from "../assets/images/home1.jpeg";
+import { Truck, Package, Shield, MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -130,7 +132,7 @@ export default function Home() {
           <h1 className="text-3xl md:text-4xl font-serif tracking-wide text-gray-800">
             Top Products
           </h1>
-          <div className="mt-3 mx-auto w-20 h-[2px] bg-[#d4af37]"></div>
+          <div className="mt-3 mx-auto w-20 h-0.5 bg-[#d4af37]"></div>
         </div>
 
         {/* Products Grid */}
@@ -152,6 +154,112 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+      <div className="min-h-screen bg-white mt-10">
+        {/* Hero Section */}
+        <div className="relative h-190 w-full">
+          <img
+            src={home1}
+            alt="Engagement Ring"
+            className="w-full h-full object-cover"
+          />
+
+          <div className="absolute inset-0 flex items-center justify-center">
+            <h1 className="text-white text-3xl md:text-4xl font-light tracking-widest italic text-center px-4">
+              AMAZING, BEAUTIFUL <br />
+              DAINTY LITTLE THINGS
+            </h1>
+          </div>
+
+          {/* Card OVER image */}
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-32 z-30">
+            <div className="bg-gray-900 px-14 py-14 max-w-3xl text-center shadow-lg">
+              <p className="text-white text-base md:text-lg leading-relaxed font-serif mb-10">
+                They say you should always ask someone about their values on a
+                first date, so here are ours. We make our pieces at the same
+                places other premium brands do, so you're getting that
+                high-level quality — but without the high-level price. You're
+                welcome.
+              </p>
+
+              <a
+                href="#"
+                className="relative inline-block text-sm tracking-widest
+    text-white font-medium pb-1
+    after:absolute after:left-0 after:bottom-0 after:w-full after:h-px
+    after:bg-white
+    hover:text-yellow-600 hover:after:bg-yellow-600
+    transition-all duration-300"
+              >
+                GET TO KNOW US
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Section under */}
+        <div className="bg-white pt-24 pb-24 px-4"></div>
+      </div>
+
+      <section className="py-10 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex items-start gap-4">
+              <div className="shrink-0">
+                <Truck className="w-12 h-12 text-gray-800" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                  Free Shipping
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Free shipping for orders from $200
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="shrink-0">
+                <Package className="w-12 h-12 text-gray-800" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                  Easy Returns
+                </h3>
+                <p className="text-sm text-gray-600">Refund within 14 days</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="shrink-0">
+                <Shield className="w-12 h-12 text-gray-800" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                  Secure Payment
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Payment information is safe
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="shrink-0">
+                <MessageCircle className="w-12 h-12 text-gray-800" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                  Customer Care
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Outstanding premium support
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
