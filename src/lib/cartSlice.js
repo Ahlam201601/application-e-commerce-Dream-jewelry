@@ -23,6 +23,9 @@ const cartSlice = createSlice({
       state.totalQuantity += 1;
       state.totalPrice += item.price;
     },
+    removeFromCart: (state, action) => {
+        
+    }
   },
 });
 

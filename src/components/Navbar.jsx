@@ -3,7 +3,7 @@ import { FaShoppingBag, FaHeart, FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import logo from "../assets/images/logo.png";
 import { useSelector } from "react-redux";
-// import CartSidebar from "./CartSidebar";
+import CartSidebar from "./CartSidebar";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -81,7 +81,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        {/* <CartSidebar open={cartOpen} onClose={() => setCartOpen(false)} /> */}
+        <CartSidebar open={cartOpen} onClose={() => setCartOpen(false)} />
       </nav>
 
       {/* ===== Mobile Menu ===== */}
