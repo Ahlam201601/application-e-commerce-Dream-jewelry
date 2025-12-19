@@ -8,7 +8,8 @@ import CartSidebar from "./CartSidebar";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
-  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  // const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const cartItems =useSelector((state) => state.cart.cartItems);
 
   return (
     <>
@@ -18,11 +19,11 @@ export default function Navbar() {
             <button className="relative" onClick={() => setCartOpen(true)}>
               <FaShoppingBag className="cursor-pointer hover:text-yellow-600 transition" />
 
-              {totalQuantity > 0 && (
+              
                 <span className="absolute -top-2 -right-2 bg-yellow-600 text-black text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
-                  {totalQuantity}
+                  {cartItems.length}
                 </span>
-              )}
+              
             </button>
 
             <Link
