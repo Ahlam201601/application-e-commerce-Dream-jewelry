@@ -48,7 +48,8 @@ export default function ProductCard({ product }) {
 
         {/* Button */}
         <button onClick={() => dispatch(addToCart(product))} className="text-gray-800 font-medium text-sm hover:text-yellow-600 transition-colors flex items-center justify-center gap-1 mx-auto">
-          {product.buttonText || 'Add to cart'}
+          {/* {product.buttonText || 'Add to cart'} */}
+          Add to cart
           <span>→</span>
         </button>
       </div>
