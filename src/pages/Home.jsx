@@ -184,13 +184,7 @@ export default function Home() {
 
               <a
                 href="#"
-                className="relative inline-block text-sm tracking-widest
-    text-white font-medium pb-1
-    after:absolute after:left-0 after:bottom-0 after:w-full after:h-px
-    after:bg-white
-    hover:text-yellow-600 hover:after:bg-yellow-600
-    transition-all duration-300"
-              >
+                className="relative inline-block text-sm tracking-widest text-white font-medium pb-1after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:bg-white hover:text-yellow-600 hover:after:bg-yellow-600 transition-all duration-300">
                 GET TO KNOW US
               </a>
             </div>

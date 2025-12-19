@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Heart, Eye } from 'lucide-react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../lib/cartSlice';
 
 export default function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false);
+  const dispatch =useDispatch();
 
   return (
     <div 
@@ -43,7 +46,7 @@ export default function ProductCard({ product }) {
         </p>
 
         {/* Button */}
-        <button className="text-gray-800 font-medium text-sm hover:text-yellow-600 transition-colors flex items-center justify-center gap-1 mx-auto">
+        <button onClick={() => dispatch(addToCart(product))} className="text-gray-800 font-medium text-sm hover:text-yellow-600 transition-colors flex items-center justify-center gap-1 mx-auto">
           {product.buttonText || 'Add to cart'}
           <span>→</span>
         </button>
