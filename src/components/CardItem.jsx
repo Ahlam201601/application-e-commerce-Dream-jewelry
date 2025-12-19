@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import {
   removeCart,
+  decreaseQuantity,
   increaseQuantity
 } from "../lib/cartSlice";
 import { FaTrash } from "react-icons/fa";
@@ -24,7 +25,12 @@ export default function CardItem({ item }) {
 
         {/* Quantity controls */}
         <div className="flex items-center gap-2 mt-2">
-          
+          <button
+            onClick={() => dispatch(decreaseQuantity(item.id))}
+            className="w-6 h-6 bg-gray-300 rounded font-bold"
+          >
+            -
+          </button>
 
           <span className="font-semibold">{item.quantity}</span>
 
