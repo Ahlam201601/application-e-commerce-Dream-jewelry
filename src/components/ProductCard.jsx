@@ -42,7 +42,7 @@ export default function ProductCard({ product }) {
         
         {/* Price */}
         <p className="text-yellow-600 font-bold text-xl mb-4">
-          {product.price}
+          {product.price} $
         </p>
 
         {/* Button */}

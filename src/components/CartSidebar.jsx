@@ -53,12 +53,12 @@ export default function CartSidebar({ open, onClose  }) {
 
         {/* Footer */}
         {cartItems.length > 0 && (
-          <div className="mt-4 border-t pt-4 mb-4">
+          <div className="mt-4 border-t pt-4 mb-4 text-black">
             <p className="font-semibold">
               Total Items: {totalQuantity}
             </p>
             <p className="font-semibold">
-              Total Price: {totalPrice} MAD
+              Total Price: {totalPrice} $
             </p>
           </div>
         )}

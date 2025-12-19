@@ -8,8 +8,8 @@ import CartSidebar from "./CartSidebar";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
-  // const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  const cartItems =useSelector((state) => state.cart.cartItems);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  // const cartItems =useSelector((state) => state.cart.cartItems);
 
   return (
     <>
@@ -18,10 +18,8 @@ export default function Navbar() {
           <div className="flex items-center gap-6 text-white/80">
             <button className="relative" onClick={() => setCartOpen(true)}>
               <FaShoppingBag className="cursor-pointer hover:text-yellow-600 transition" />
-
-              
                 <span className="absolute -top-2 -right-2 bg-yellow-600 text-black text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
-                  {cartItems.length}
+                  {totalQuantity}
                 </span>
               
             </button>
@@ -84,6 +82,7 @@ export default function Navbar() {
         </div>
         <CartSidebar open={cartOpen} onClose={() => setCartOpen(false)} />
       </nav>
+      
 
       {/* ===== Mobile Menu ===== */}
       {open && (
