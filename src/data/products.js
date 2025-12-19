@@ -34,7 +34,7 @@ export const products = [
     id: 4,
     name: "Kalvesna Diamond Twig Ring",
     category: "Rings",
-    price: "39.00 - $59.00",
+    price: "59.00",
     image: img4,
   },
   {
@@ -55,7 +55,7 @@ export const products = [
     id: 7,
     name: "Four-Leaf Clover Rings",
     category: "Rings",
-    price: "129.00 - $149.00",
+    price: "129.00",
     image: img7,
   },
   {

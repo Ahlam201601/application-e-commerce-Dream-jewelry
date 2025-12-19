@@ -4,11 +4,14 @@ import { useState } from "react";
 import logo from "../assets/images/logo.png";
 import { useSelector } from "react-redux";
 import CartSidebar from "./CartSidebar";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const total = useSelector((state)=>state.wishliste.total)
+  const navigate = useNavigate();
   // const cartItems =useSelector((state) => state.cart.cartItems);
 
   return (
@@ -24,12 +27,21 @@ export default function Navbar() {
               
             </button>
 
-            <Link
+            <button className="relative">
+              <FaHeart onClick={() => navigate("/wishlist")} className="cursor-pointer hover:text-yellow-600 transition" />
+                <span className="absolute -top-2 -right-2 bg-yellow-600 text-black text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
+                  {total}
+                </span>
+              
+            </button>
+            
+
+            {/* <Link
               to="/wishlist"
               className="relative text-white hover:text-[#beaf7b] transition-colors"
             >
               <FaHeart className="cursor-pointer hover:text-yellow-600 transition" />
-            </Link>
+            </Link> */}
           </div>
 
           <div className="flex flex-col items-center">

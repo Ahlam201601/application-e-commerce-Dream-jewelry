@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import CardItem from "./CardItem";
 
@@ -23,13 +22,13 @@ export default function CartSidebar({ open, onClose  }) {
 
       {/* Sidebar */}
       <div
-        className={`fixed right-0 top-16 w-96 h-[calc(100vh-4rem)] bg-white p-4 flex flex-col transform transition-transform duration-300 ${
+        className={`fixed right-0 top-0 w-md h-screen bg-white p-6 flex flex-col transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
-        }`}
+        } text-white`}
       >
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">My Cart</h2>
+          <h2 className="text-xl font-bold text-[#0a0a1f]">My Cart</h2>
           <button
             onClick={onClose}
             className="text-xl font-bold text-gray-500 hover:text-black"

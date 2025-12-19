@@ -21,7 +21,7 @@ export default function CardItem({ item }) {
 
       <div className="flex-1">
         <p className="font-semibold">{item.name}</p>
-        <p className="text-sm text-gray-500">{item.price} MAD</p>
+        <p className="text-sm text-gray-200">{item.price} $</p>
 
         {/* Quantity controls */}
         <div className="flex items-center gap-2 mt-2">

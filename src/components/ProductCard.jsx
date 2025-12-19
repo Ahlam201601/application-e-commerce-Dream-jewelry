@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Heart, Eye } from 'lucide-react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../lib/cartSlice';
+import {addToWishliste} from '../lib/wishlistSlice'
 
 export default function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -25,7 +26,7 @@ export default function ProductCard({ product }) {
         <div className={`absolute top-3 right-3 flex flex-col gap-2 transition-all duration-300 ${
           isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
         }`}>
-          <button className="bg-white p-2 rounded-full shadow-md hover:bg-yellow-600 hover:text-white transition-colors">
+          <button onClick={() => dispatch(addToWishliste(product))} className="bg-white p-2 rounded-full shadow-md hover:bg-yellow-600 hover:text-white transition-colors">
             <Heart size={16} />
           </button>
           <button className="bg-white p-2 rounded-full shadow-md hover:bg-yellow-600 hover:text-white transition-colors">
