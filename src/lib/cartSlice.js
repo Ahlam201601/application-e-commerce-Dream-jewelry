@@ -55,19 +55,15 @@ const cartSlice = createSlice({
     },
 
     decreaseQuantity: (state, action) => {
-      const item = state.cartItems.find((i) => i.id === action.payload);
-      if (item) {
-        item.quantity -= 1;
-        state.totalQuantity -= 1;
-        state.totalPrice -= Number(item.price);
+  const item = state.cartItems.find((i) => i.id === action.payload);
+  if (item && item.quantity > 1) {  // ✅ seulement si quantity > 1
+    item.quantity -= 1;
+    state.totalQuantity -= 1;
+    state.totalPrice -= Number(item.price);
 
-        if (item.quantity === 0) {
-          state.cartItems = state.cartItems.filter((i) => i.id !== action.payload);
-        }
-
-        localStorage.setItem("cart", JSON.stringify(state));
-      }
-    },
+    localStorage.setItem("cart", JSON.stringify(state));
+  }
+  },
     
     clearCart: (state) => {
       state.cartItems = [];
