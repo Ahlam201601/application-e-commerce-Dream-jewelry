@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// 🔹 jml data men localStorage
 const savedCart = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : { cartItems: [], totalQuantity: 0, totalPrice: 0 };
@@ -17,6 +16,7 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const item = action.payload;
+      state.cartItems = state.cartItems || [];
       const exist = state.cartItems.find((i) => i.id === item.id);
 
       if (exist) {

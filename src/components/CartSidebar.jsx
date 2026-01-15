@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 import CardItem from "./CardItem";
 
 export default function CartSidebar({ open, onClose  }) {
-  const { cartItems, totalQuantity, totalPrice } = useSelector(
-    (state) => state.cart
+  const { cartItems = [] , totalQuantity = 0, totalPrice  = 0 } = useSelector(
+    (state) => state.cart || {}
   );
 
   return (
